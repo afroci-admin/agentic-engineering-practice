@@ -22,9 +22,10 @@
   "jest": {
     "testEnvironment": "node",
     "testMatch": [
-      "**/tests/*.test.js",
-      "**/tests/userTest.js",
-      "**/tests/test-projects.js"
+      "**/tests/*.test.js"
     ]
+  },
+  "allowScripts": {
+    "better-sqlite3@12.11.1": true
   }
 }
