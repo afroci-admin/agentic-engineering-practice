@@ -69,6 +69,12 @@ The refactor kept HTTP behavior identical. These gaps remain; mention them when 
 - Test files set `process.env.NODE_ENV = 'test'` before requiring `../src/app`, so `src/db/connection.js` uses the in-memory database, then call `createSchema(db)` from `src/db/schema.js`. The seed script uses the same function, so a schema change is made in one place.
 - Name test files `resource.test.js` (e.g. `tasks.test.js`) in `tests/`. Jest's `testMatch` is the glob `**/tests/*.test.js`, so new files are picked up automatically.
 
+## Verification
+
+After completing any significant change, run `/verify-app` before committing. Do not commit if any tests are failing.
+
+The test suite uses supertest and covers all API endpoints, so a passing run confirms the full application is working correctly. The exceptions are the behaviors listed under "Known gaps", which the tests don't exercise.
+
 ## Context Files
 
 Read the relevant file before starting the task:
