@@ -81,3 +81,8 @@ Read the relevant file before starting the task:
 
 - `.claude/context/api-conventions.md` — for any task involving API routes or endpoints
 - `.claude/context/testing-standards.md` — for any task involving tests or test coverage
+
+## Active Plugins
+
+- The `my-standards` plugin is active, and its conventions apply to all code in this project.
+- Use the `my-standards:api-endpoints` skill when adding new routes.
